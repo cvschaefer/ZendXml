@@ -65,7 +65,7 @@ class Security
             }
             return false;
         }, E_WARNING);
-        $result = $dom->loadXml($xml, LIBXML_NONET);
+        $result = $dom->loadXml($xml, LIBXML_NONET | LIBXML_PARSEHUGE);
         restore_error_handler();
 
         if (!$result) {
